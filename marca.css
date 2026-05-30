@@ -1,0 +1,191 @@
+/* ============================================================
+   MARCA.CSS — Estilos GENERALES (compartidos por TODAS las páginas)
+   Aquí van: colores, tipografía, medidas, botones, barra de
+   navegación y los formularios/modal (se usan en varias páginas).
+   Lo específico de cada página está en inicio.css, planes.css y acceso.css.
+   ============================================================ */
+
+
+/* ============================================================
+   1. VARIABLES DE LA MARCA
+   Todos los colores, la tipografía y las medidas se definen
+   aquí una sola vez. En el resto del código solo se usan estas
+   variables (var(--nombre)).
+   ============================================================ */
+:root {
+  /* --- Colores --- */
+  --color-fondo:       #dce9f5;            /* Fondo azul claro de la página   */
+  --color-superficie:  #ffffff;            /* Fondo de tarjetas y barras      */
+  --color-primario:    #003580;            /* Azul Global (títulos y marca)   */
+  --color-acento:      #f5a800;            /* Azul claro (botones y destacados) */
+  --color-texto:       #1a1a2e;            /* Texto principal oscuro          */
+  --color-texto-suave: #5a6a85;            /* Texto secundario gris-azul      */
+  --color-borde:       #c4d4e8;            /* Líneas y bordes suaves          */
+  --color-velo:        rgba(0, 0, 0, .45); /* Fondo oscuro detrás del modal   */
+  --color-acento-texto: #0087DC;
+  /* --- Tipografía --- */
+  --fuente:        'Segoe UI', system-ui, sans-serif;
+  --peso-titulo:   800;                    /* Negrita para títulos */
+  --peso-texto:    400;                    /* Texto normal         */
+
+  /* --- Medidas --- */
+  --radio:  20px;                          /* Redondeo de esquinas */
+  --sombra: 0 8px 40px rgba(0, 53, 128, .13);
+}
+
+
+/* ============================================================
+   2. REINICIO BÁSICO + TEXTO GENERAL
+   ============================================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+ul  { list-style: none; }
+a   { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+body {
+  font-family: var(--fuente);
+  font-weight: var(--peso-texto);
+  line-height: 1.5;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* Utilidad: resalta una palabra en azul (se usa en varias páginas) */
+.palabra-azul { color: var(--color-acento-texto); }
+
+
+/* ============================================================
+   3. BOTONES (se nombran por su color para reconocerlos fácil)
+   ============================================================ */
+.boton {
+  display: inline-block;
+  padding: .7rem 1.6rem;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  font-weight: var(--peso-titulo);
+  font-size: .95rem;
+  cursor: pointer;
+}
+.boton:hover { opacity: .85; }
+
+.boton-amarillo { background: var(--color-acento);  color: var(--color-texto); }
+.boton-azul     { background: var(--color-primario); color: var(--color-superficie); }
+.boton-claro    { background: var(--color-fondo);    color: var(--color-texto); }
+.boton-borde    { background: transparent; border-color: var(--color-primario); color: var(--color-primario); }
+
+
+/* ============================================================
+   4. BARRA DE NAVEGACIÓN
+   ============================================================ */
+.barra-navegacion {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  background: var(--color-superficie);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo { height: 36px; }
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;                 /* Empuja el menú hacia la derecha */
+  font-size: .9rem;
+  color: var(--color-texto-suave);
+}
+.menu a { cursor: pointer; }
+.menu a:hover { color: var(--color-primario); }
+.menu-activo  { color: var(--color-primario); font-weight: var(--peso-titulo); }
+
+.botones-navegacion { display: flex; gap: .75rem; }
+
+
+/* ============================================================
+   5. FORMULARIOS Y MODAL (generales, se usan en varias páginas)
+   ============================================================ */
+
+/* --- Campos de formulario --- */
+.campo { margin-bottom: 1rem; }
+.campo label {
+  display: block;
+  font-size: .85rem;
+  font-weight: var(--peso-titulo);
+  color: var(--color-primario);
+  margin-bottom: .35rem;
+}
+.campo input {
+  width: 100%;
+  padding: .65rem 1rem;
+  border: 1.5px solid var(--color-borde);
+  border-radius: 10px;
+  font-family: var(--fuente);
+  font-size: .95rem;
+  color: var(--color-texto);
+}
+.campo input:focus { outline: none; border-color: var(--color-primario); }
+.boton-enviar { width: 100%; margin-top: .5rem; }
+
+/* --- Ventana flotante (modal) --- */
+.fondo-modal {
+  display: none;                 /* Oculto por defecto */
+  position: fixed;
+  inset: 0;
+  background: var(--color-velo);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.visible { display: flex; }      /* JavaScript agrega esta clase para mostrarlo */
+
+.modal {
+  background: var(--color-superficie);
+  border-radius: var(--radio);
+  padding: 2.5rem;
+  width: min(480px, 92vw);
+  position: relative;
+}
+.cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--color-texto-suave);
+  cursor: pointer;
+}
+.titulo-modal {
+  font-size: 1.35rem;
+  font-weight: var(--peso-titulo);
+  color: var(--color-primario);
+  line-height: 1.3;
+  margin-bottom: .5rem;
+}
+.subtitulo-modal {
+  font-size: .9rem;
+  color: var(--color-texto-suave);
+  margin-bottom: 1.75rem;
+}
+
+
+/* ============================================================
+   6. ANIMACIONES GENERALES
+   Flotar: sube y baja en bucle. Se usa en los cofres de
+   todas las páginas para dar sensación de movimiento.
+   ============================================================ */
+@keyframes flotar {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -10px; }
+}
+
+
+/* ============================================================
+   7. RESPONSIVE general (la barra de navegación)
+   ============================================================ */
+@media (max-width: 960px) {
+  .barra-navegacion { padding: 1rem 1.5rem; }
+  .menu { display: none; }
+}
