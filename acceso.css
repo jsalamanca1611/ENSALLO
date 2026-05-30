@@ -1,0 +1,58 @@
+/* ============================================================
+   ACCESO.CSS — Estilos ESPECÍFICOS de la página de acceso
+   (Iniciar sesión / Registrarse en una sola tarjeta con pestañas)
+   Los campos de formulario son generales: están en marca.css.
+   ============================================================ */
+
+
+/* ============================================================
+   1. CONTENEDOR CENTRADO
+   ============================================================ */
+.acceso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 68px);   /* Alto de la pantalla menos la barra */
+  padding: 2rem 1.5rem;
+}
+
+
+/* ============================================================
+   2. TARJETA DE ACCESO
+   ============================================================ */
+.tarjeta-acceso {
+  width: min(420px, 100%);
+  background: var(--color-superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 2rem;
+}
+
+
+/* ============================================================
+   3. PESTAÑAS (elegir entre iniciar sesión y registrarse)
+   ============================================================ */
+.pestanas {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+}
+.pestana {
+  flex: 1;
+  padding: .7rem;
+  border: none;
+  border-radius: 50px;
+  background: var(--color-fondo);
+  color: var(--color-texto-suave);
+  font-family: var(--fuente);
+  font-weight: var(--peso-titulo);
+  font-size: .9rem;
+  cursor: pointer;
+}
+.pestana-activa {
+  background: var(--color-primario);
+  color: var(--color-superficie);
+}
+
+/* Oculta el formulario que no está seleccionado */
+.oculto { display: none; }
