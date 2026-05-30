@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobalSeguros — Planes educativos</title>
+  <link rel="stylesheet" href="marca.css">
+  <link rel="stylesheet" href="planes.css">
+</head>
+<body>
+
+  <!-- ===== BARRA DE NAVEGACIÓN ===== -->
+  <nav class="barra-navegacion">
+    <img class="logo" src="https://jps-dev.sirv.com/Images/global_seguros.svg" alt="GlobalSeguros">
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="planes.html" class="menu-activo">Planes</a></li>
+      <li><a href="#" onclick="abrirContacto(); return false;">Contacto</a></li>
+    </ul>
+    <div class="botones-navegacion">
+      <a href="acceso.html#sesion" class="boton boton-azul">Iniciar sesión</a>
+      <a href="acceso.html#registro" class="boton boton-claro">Registrarse</a>
+    </div>
+  </nav>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header class="encabezado">
+    <h1 class="titulo-pagina">Elige el tesoro ideal<br>para el futuro de tu hijo</h1>
+    <p class="subtitulo-pagina">100% de la matrícula universitaria garantizada. Tú eliges el nivel de cobertura.</p>
+  </header>
+
+  <!-- ===== COMPARADOR DE PLANES ===== -->
+  <section class="comparador">
+
+    <!-- Plan 1: GlobalSemestres -->
+    <article class="tarjeta">
+      <div class="cabecera">
+        <img class="cofre-tarjeta" src="https://jps-dev.sirv.com/Images/Gemini_Generated_Image_vucb5hvucb5hvucb-removebg-preview.png" alt="Cofre GlobalSemestres">
+        <h2 class="nombre-plan">GlobalSemestres</h2>
+        <p class="lema-plan">Paga los semestres que necesitas</p>
+      </div>
+      <div class="cuerpo">
+        <div class="grupo">
+          <span class="titulo-grupo">Seguro educativo</span>
+          <p class="beneficio"><span class="icono">✔</span> 100% del valor de la matrícula garantizado</p>
+          <p class="beneficio"><span class="icono">✔</span> Cualquier universidad de pregrado en Colombia</p>
+          <p class="beneficio"><span class="icono">✔</span> Cobertura: el número de semestres adquiridos</p>
+        </div>
+        <div class="grupo">
+          <span class="titulo-grupo">Seguro de vida incluido</span>
+          <p class="beneficio"><span class="icono">✔</span> Cubre muerte o incapacidad total o permanente</p>
+          <p class="beneficio"><span class="icono">✔</span> Periodo de cobertura: 1 año</p>
+          <p class="beneficio"><span class="icono">✔</span> Edad máxima de ingreso: 70 años</p>
+        </div>
+      </div>
+      <button class="boton boton-amarillo boton-comprar" onclick="abrirFormulario('GlobalSemestres')">Adquirir plan</button>
+    </article>
+
+    <!-- Plan 2: GlobalUniversidad Garantizada (destacado) -->
+    <article class="tarjeta tarjeta-destacada">
+      <div class="cabecera">
+        <span class="etiqueta-popular">Más popular</span>
+        <img class="cofre-tarjeta" src="https://jps-dev.sirv.com/Images/Gemini_Generated_Image_b4kniqb4kniqb4kn-removebg-preview.png" alt="Cofre GlobalUniversidad Garantizada">
+        <h2 class="nombre-plan">GlobalUniversidad Garantizada</h2>
+        <p class="lema-plan">Protección completa durante la carrera</p>
+      </div>
+      <div class="cuerpo">
+        <div class="grupo">
+          <span class="titulo-grupo">Seguro educativo</span>
+          <p class="beneficio"><span class="icono">✔</span> 100% del valor de la matrícula garantizado</p>
+          <p class="beneficio"><span class="icono">✔</span> Cualquier universidad de pregrado en Colombia</p>
+          <p class="beneficio"><span class="icono">✔</span> Hasta 5 años / máximo 10 pagos</p>
+        </div>
+        <div class="grupo">
+          <span class="titulo-grupo">Seguro de vida incluido</span>
+          <p class="beneficio"><span class="icono">✔</span> Cubre muerte o incapacidad total o permanente</p>
+          <p class="beneficio"><span class="icono">✔</span> Periodo de cobertura: 5 años</p>
+          <p class="beneficio"><span class="icono">✔</span> Edad máxima de ingreso: 65 años</p>
+        </div>
+      </div>
+      <button class="boton boton-amarillo boton-comprar" onclick="abrirFormulario('GlobalUniversidad Garantizada')">Adquirir plan</button>
+    </article>
+
+    <!-- Plan 3: GlobalUniversidad Garantizada Platino -->
+    <article class="tarjeta">
+      <div class="cabecera">
+        <img class="cofre-tarjeta" src="https://jps-dev.sirv.com/Images/image_1__1_-removebg-preview.png" alt="Cofre GlobalUniversidad Garantizada Platino">
+        <h2 class="nombre-plan">GlobalUniversidad Garantizada Platino</h2>
+        <p class="lema-plan">La cobertura más completa del mercado</p>
+      </div>
+      <div class="cuerpo">
+        <div class="grupo">
+          <span class="titulo-grupo">Seguro educativo</span>
+          <p class="beneficio"><span class="icono">✔</span> 100% del valor de la matrícula garantizado</p>
+          <p class="beneficio"><span class="icono">✔</span> Cualquier universidad de pregrado en Colombia</p>
+          <p class="beneficio"><span class="icono">✔</span> Hasta 5 años / máximo 10 pagos</p>
+        </div>
+        <div class="grupo">
+          <span class="titulo-grupo">Seguro de vida incluido</span>
+          <p class="beneficio"><span class="icono icono-estrella">★</span> Renta mensual de 2 SMMLV por 12 meses</p>
+          <p class="beneficio"><span class="icono icono-estrella">★</span> Cubre hasta 15 años de escolaridad</p>
+          <p class="beneficio"><span class="icono">✔</span> Edad máxima de ingreso: 55 años</p>
+        </div>
+      </div>
+      <button class="boton boton-amarillo boton-comprar" onclick="abrirFormulario('GlobalUniversidad Garantizada Platino')">Adquirir plan</button>
+    </article>
+
+  </section>
+
+  <!-- ===== MODAL DEL FORMULARIO ===== -->
+  <!-- Al hacer clic en el fondo oscuro se cierra el modal -->
+  <div class="fondo-modal" id="fondo-modal" onclick="cerrarFormulario()">
+    <!-- stopPropagation evita que se cierre al hacer clic DENTRO del modal -->
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="cerrar" onclick="cerrarFormulario()">✕</button>
+
+      <h2 class="titulo-modal">
+        Estás a un paso de asegurar<br>
+        <span id="nombre-plan" class="palabra-azul"></span>
+      </h2>
+      <p class="subtitulo-modal">Un asesor te contactará para guiarte en el proceso.</p>
+
+      <div class="campo">
+        <label>Nombre completo</label>
+        <input type="text" placeholder="Ej: María González">
+      </div>
+      <div class="campo">
+        <label>Teléfono</label>
+        <input type="tel" placeholder="Ej: 300 123 4567">
+      </div>
+      <div class="campo">
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="Ej: maria@correo.com">
+      </div>
+
+      <button class="boton boton-azul boton-enviar">Quiero que me contacten</button>
+    </div>
+  </div>
+
+  <script src="planes.js"></script>
+  <script src="contacto.js"></script>
+</body>
+</html>
