@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobalSeguros — El futuro de tu hijo comienza hoy</title>
+  <link rel="stylesheet" href="marca.css">
+  <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="barra-navegacion">
+    <img class="logo" src="https://jps-dev.sirv.com/Images/global_seguros.svg" alt="GlobalSeguros">
+    <ul class="menu">
+      <li><a href="planes.html">Planes</a></li>
+      <li><a href="#" onclick="abrirContacto(); return false;">Contacto</a></li>
+    </ul>
+    <div class="botones-navegacion">
+      <a href="acceso.html#sesion" class="boton boton-azul">Iniciar sesión</a>
+      <a href="acceso.html#registro" class="boton boton-claro">Registrarse</a>
+    </div>
+  </nav>
+
+  <!-- PÁGINA DE INICIO -->
+  <section class="inicio">
+
+    <!-- Columna 1 - texto principal -->
+    <div>
+      <h1 class="titulo-inicio">
+        El futuro de tu hijo<br>
+        comienza <span class="palabra-azul">hoy</span>
+      </h1>
+      <a href="planes.html" class="boton boton-amarillo">Ver planes</a>
+    </div>
+
+    <!-- Columna - cofre -->
+    <div class="cofre-inicio">
+      <img id="imagen-cofre" class="imagen-cofre"
+           src="https://jps-dev.sirv.com/Images/image_1__1_-removebg-preview.png"
+           alt="Cofre de ahorro">
+    </div>
+
+    <!-- Columna - carrusel de planes -->
+    <div class="panel-planes">
+
+      <!-- Tarjeta 1: Platino -->
+      <div class="tarjeta-plan tarjeta-activa">
+        <h3 class="titulo-plan">Plan Platino</h3>
+        <ul class="lista-plan">
+          <li>100% matrícula universitaria garantizada</li>
+          <li>Cualquier universidad en Colombia</li>
+          <li>Renta mensual de 2 SMMLV por 12 meses</li>
+          <li>Edad máxima de ingreso: 55 años</li>
+        </ul>
+        <a href="planes.html" class="boton boton-borde boton-plan">Ver más</a>
+      </div>
+
+      <!-- Tarjeta 2: Oro -->
+      <div class="tarjeta-plan">
+        <h3 class="titulo-plan">Plan Oro</h3>
+        <ul class="lista-plan">
+          <li>100% matrícula universitaria garantizada</li>
+          <li>Cualquier universidad en Colombia</li>
+          <li>Seguro de vida por 5 años</li>
+          <li>Edad máxima de ingreso: 65 años</li>
+        </ul>
+        <a href="planes.html" class="boton boton-borde boton-plan">Ver más</a>
+      </div>
+
+      <!-- Tarjeta 3: Plata -->
+      <div class="tarjeta-plan">
+        <h3 class="titulo-plan">Plan Plata</h3>
+        <ul class="lista-plan">
+          <li>100% matrícula universitaria garantizada</li>
+          <li>Cobertura por el número de semestres</li>
+          <li>Seguro de vida por 1 año</li>
+          <li>Edad máxima de ingreso: 70 años</li>
+        </ul>
+        <a href="planes.html" class="boton boton-borde boton-plan">Ver más</a>
+      </div>
+
+      <!-- Flechas de navegación -->
+      <div class="navegacion-planes">
+        <button class="flecha" onclick="cambiarPlan(-1)">←</button>
+        <div class="puntos">
+          <span class="punto punto-activo"></span>
+          <span class="punto"></span>
+          <span class="punto"></span>
+        </div>
+        <button class="flecha" onclick="cambiarPlan(1)">→</button>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+  <script src="contacto.js"></script>
+</body>
+</html>
